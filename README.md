@@ -37,6 +37,10 @@ cd sfntly-read-only/java/
 ant
 ```
 
+All built files are then in the dist folder, with the jars in the tools subdir probably being what you want.
+
+sfnttool.jar is at dist/tools/sfnttool/sfnttool.jar
+
 CPP
 ------
 Googles instructions are here: https://code.google.com/p/sfntly/wiki/build_cpp
@@ -57,3 +61,5 @@ cd build
 cmake ..
 make
 ```
+
+All the executables are then in the bin folder.
