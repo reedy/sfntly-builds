@@ -8,7 +8,7 @@ Instructions are a bit sparse over there, especially with regards to dependancie
 Java
 ------
 
-#### On Ubuntu 13.10 (or others with openjdk-7 by default):
+#### On Ubuntu 13.10 (or others with openjdk-7 by default)
 ```bash
 apt-get install openjdk-7-jdk
 ```
@@ -17,19 +17,19 @@ apt-get install openjdk-7-jdk
 
 update-alternatives should tidy up the multiple versions so it works. Chances are you don't really need both versions installed simultaneously!
 
-##### To force/use 7
+##### To force/use 
 ```bash
 apt-get purge openjdk-6-jre-lib openjdk-6-jre-headless
 apt-get install openjdk-7-jdk
 ```
 
-##### To force/use 6:
+##### To force/use 6
 ```bash
 apt-get purge openjdk-7-jre openjdk-7-jre-headless openjdk-7-jre-lib
 apt-get install openjdk-6-jdk
 ```
 
-#### Then for all versions:
+#### Then for all versions
 ```bash
 apt-get install subversion ant
 svn checkout http://sfntly.googlecode.com/svn/trunk/ sfntly-read-only
@@ -39,3 +39,21 @@ ant
 
 CPP
 ------
+Googles instructions are here: https://code.google.com/p/sfntly/wiki/build_cpp
+
+
+```bash
+apt-get install libicu-dev make cmake build-essential unzip
+```
+
+#### Dependancies
+```bash
+cd cpp/ext/redist
+unzip gtest-1.6.0.zip
+mv gtest-1.6.0 ../gtest
+cd ../..
+mkdir build
+cd build
+cmake ..
+make
+```
