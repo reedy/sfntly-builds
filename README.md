@@ -41,12 +41,12 @@ CPP
 ------
 Googles instructions are here: https://code.google.com/p/sfntly/wiki/build_cpp
 
-
+#### Dependancies
 ```bash
 apt-get install libicu-dev make cmake build-essential unzip
 ```
 
-#### Dependancies
+#### Commands
 ```bash
 cd cpp/ext/redist
 unzip gtest-1.6.0.zip
