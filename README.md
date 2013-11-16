@@ -17,13 +17,13 @@ apt-get install openjdk-7-jdk
 
 update-alternatives should tidy up the multiple versions so it works. Chances are you don't really need both versions installed simultaneously!
 
-##### To force/use 
+##### To force/use openjdk7
 ```bash
 apt-get purge openjdk-6-jre-lib openjdk-6-jre-headless
 apt-get install openjdk-7-jdk
 ```
 
-##### To force/use 6
+##### To force/use openjdk 6
 ```bash
 apt-get purge openjdk-7-jre openjdk-7-jre-headless openjdk-7-jre-lib
 apt-get install openjdk-6-jdk
