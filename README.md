@@ -13,19 +13,38 @@ Java
 apt-get install openjdk-7-jdk
 ```
 
-#### On older versions (Ubuntu 12.04 LTS for example), you need to use either openjdk-6 or openjdk-7
+#### On older versions (Ubuntu 12.04 LTS for example), you can use either openjdk-6 or openjdk-7.
 
-update-alternatives should tidy up the multiple versions so it works. Chances are you don't really need both versions installed simultaneously!
+update-alternatives should tidy up the multiple versions so it works. Chances are you don't really need both versions installed simultaneously anyway!
 
-##### To force/use openjdk7
 ```bash
-apt-get purge openjdk-6-jre-lib openjdk-6-jre-headless
+update-alternatives --config java
+update-alternatives --config javac
+update-alternatives --config javaws
+```
+
+For each of the above commands you'll get something like the below. Selecting 1/2 as appropriate will allow you to change the "active" openjdk version
+
+```bash
+root@ubuntu64-web-esxi:/home/reedy/sfntly-builds# update-alternatives --config javac
+There are 2 choices for the alternative javac (providing /usr/bin/javac).
+
+  Selection    Path                                         Priority   Status
+------------------------------------------------------------
+  0            /usr/lib/jvm/java-7-openjdk-amd64/bin/javac   1071      auto mode
+* 1            /usr/lib/jvm/java-6-openjdk-amd64/bin/javac   1061      manual mode
+  2            /usr/lib/jvm/java-7-openjdk-amd64/bin/javac   1071      manual mode
+
+Press enter to keep the current choice[*], or type selection number:
+```
+
+##### To use openjdk-7
+```bash
 apt-get install openjdk-7-jdk
 ```
 
-##### To force/use openjdk 6
+##### To use openjdk-6
 ```bash
-apt-get purge openjdk-7-jre openjdk-7-jre-headless openjdk-7-jre-lib
 apt-get install openjdk-6-jdk
 ```
 
