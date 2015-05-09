@@ -15,12 +15,11 @@ apt-get install openjdk-7-jdk
 
 #### On older versions (Ubuntu 12.04 LTS for example), you can use either openjdk-6 or openjdk-7.
 
-update-alternatives should tidy up the multiple versions so it works. Chances are you don't really need both versions installed simultaneously anyway!
+update-alternatives should tidy up the multiple versions so it works. Chances are you don't really need more than one version installed simultaneously anyway!
 
 ```bash
 update-alternatives --config java
 update-alternatives --config javac
-update-alternatives --config javaws
 ```
 
 For each of the above commands you'll get something like the below. Selecting 1/2 as appropriate will allow you to change the "active" openjdk version
@@ -46,6 +45,11 @@ apt-get install openjdk-7-jdk
 ##### To use openjdk-6
 ```bash
 apt-get install openjdk-6-jdk
+```
+
+##### To use openjdk-8
+```bash
+apt-get install openjdk-8-jdk
 ```
 
 #### Then for all versions
