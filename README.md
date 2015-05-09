@@ -8,12 +8,9 @@ Instructions are a bit sparse over there, especially with regards to dependancie
 Java
 ------
 
-#### On Ubuntu 13.10 (or others with openjdk-7 by default)
-```bash
-apt-get install openjdk-7-jdk
-```
+On Ubuntu 14.10 and above, you can install openjdk-8-jdk. On Ubuntu 13.10 and above, you can install openjdk-7-jdk. On older versions (Ubuntu 12.04 LTS for example), you can use either openjdk-6-jdk or openjdk-7-jdk.
 
-#### On older versions (Ubuntu 12.04 LTS for example), you can use either openjdk-6 or openjdk-7.
+#### Swapping between versions
 
 update-alternatives should tidy up the multiple versions so it works. Chances are you don't really need more than one version installed simultaneously anyway!
 
